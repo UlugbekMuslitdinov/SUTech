@@ -1,7 +1,7 @@
 <?php
     // require_once("./template/header.php");
-	require_once ($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'] . '/template/sidebar.php');
+	require_once ('C:/xampp/htdocs/template/header.php');
+    require_once ('C:/xampp/htdocs/template/sidebar.php');
 ?>
 <style type="text/css">
 .feature_image {
