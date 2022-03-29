@@ -1,0 +1,51 @@
+body {
+	padding-bottom: 30px;
+	background-color: #E9E7D8;
+}
+
+.jumbotron {
+	width: 980px !important;
+	background-color: white;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-radius: 10px;
+}
+
+.content {
+	margin-top: 40px;
+	margin-left: 20px;
+	padding-top: 10px;
+	padding-left: 15px;
+	/*padding-right: 15px;*/
+	padding-bottom: 20px;
+}
+
+.form-group {
+	margin-top: 15px;
+}
+
+.request_button {
+	margin-top: 10px;
+}
+
+.jack_id {
+	display: none;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.call_appearance {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+
+.logoheader {
+	width: 950px;
+	height: 90px;
+}
+
+.table {
+	margin-top: 10px;
+}

@@ -1,0 +1,213 @@
+body {
+  padding-bottom: 30px;
+  background-color: #E9E7D8;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: #6E2E14;
+}
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+@media (min-width: 1200px) {
+  .container{
+    max-width: 970px;
+  }
+}
+.indented-list{
+  margin-left: 10px;
+}
+.navbar-brand {
+  font-size: 20px;
+}
+.btn {
+  margin-bottom: 10px;
+}
+.theme_form {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .indented-list{
+    margin-left: 80px;
+  }
+  .footable-row-detail-cell {
+    padding-left: 40px !important;
+  }
+  .navbar-brand {
+    font-size: 28px;
+  }
+  .btn {
+    margin-bottom: 0;
+  }
+  .theme_form {
+    margin-left: 20px;
+  }
+  #dev_user_footable {
+    margin-right: 20px;
+  }
+}
+.breadcrumb {
+  padding: 4px 15px;
+  font-size: 12px;
+}
+.container-fluid {
+  max-width: 970px;
+  margin: 0 auto;
+}
+.theme-dropdown .dropdown-menu {
+  display: block;
+  position: static;
+  margin-bottom: 20px;
+}
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+.media-heading, .media-heading a {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #AB051F;
+  text-decoration: none;
+}
+.media-heading a:hover {
+  text-decoration: underline;
+}
+.navbar {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand a:hover{
+  color: #f5f5f5 !important;
+}
+.navbar-inverse {
+  background-color: #003876; /* fallback color, place your own */
+
+  /* Gradients for modern browsers, replace as you see fit */
+  background-image: -moz-linear-gradient(top, #003876, #003876);
+  background-image: -ms-linear-gradient(top, #003876, #003876);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#003876), to(#003876));
+  background-image: -webkit-linear-gradient(top, #003876, #003876);
+  background-image: -o-linear-gradient(top, #003876, #003876);
+  background-image: linear-gradient(top, #003876, #003876);
+  background-repeat: repeat-x;
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003876', endColorstr='#003876', GradientType=0);
+  border-color: #003876;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #00254f ;
+  background-image: -webkit-linear-gradient(top, #00254f  0%, #00254f  100%);
+  background-image: linear-gradient(to bottom,#00254f  0,#00254f  100%);
+  background-repeat: repeat-x;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #CCCCCC;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #194C84;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #00254f ;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #00254f ;
+  color: #ffffff;
+}
+div.container.theme-showcase {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-left: 1px solid #D0CEC1;
+  border-right: 1px solid #D0CEC1;
+  border-bottom: 1px solid #D0CEC1;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.request-link {
+  margin-left:30px;
+  margin-top:4px;
+  color: #003876;
+  text-decoration: none;
+  font-weight: bold;
+  float:left;
+}
+.request-link > img {
+  margin-right: 5px;
+}
+.request-note {
+  font-style: italic;
+  color: #666;
+  margin-left:10px;
+  float:left;
+}
+#footer {
+  clear: both;
+  color: #797979;
+  font-size: 11px;
+  font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Sans-Serif;
+  text-align: center;
+  width: 100%;
+}
+.media-object {
+  float: left;
+  margin-bottom: 5px;
+}
+.request-link, .request-note {
+  width: 100%;
+}
+.indented-list li {
+  margin-top: 6px !important;
+}
+#footer-logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.theme-showcase a {
+  font-weight: bold;
+}
+a.list-group-item {
+  font-weight: normal;
+}
+.about-emp-title {
+  font-style: italic;
+  color: #666;
+}
+.about-emp-email {
+}
+.about-emp-phone {
+}
+div.jumbotron.submitted {
+  padding-left: 20px;
+}
+.submitted.jumbotron p {
+  font-size: 14px;
+}
+.submitted.subtext {
+  color: #888;
+  font-style: italic;
+}
+.form_section_title {
+  margin-left: -8px;
+  color: #333;
+}
+.radio_group {
+  margin-left: 30px;
+}
+.form-group > .row > .form-group {
+  margin-left: 0;
+}
+.radio {
+  margin-left: 30px;
+}

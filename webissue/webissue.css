@@ -1,0 +1,185 @@
+body {
+	background: #E9E7D8;
+}
+.main-content {
+	margin-left: 20px;
+	padding: 20px 20px;
+    width:650px;
+    background-color: #dadada;
+    border: 1px solid #95a1ad;
+}
+
+/* error */
+.bg-danger {
+	padding: 10px 20px !important;
+}
+.bg-danger ul {
+	margin-bottom: 5px;
+}
+
+.page-title {
+	margin-bottom: 6px !important;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    text-align: center;
+    /*color: #AB051F !important;*/
+}
+p.webissue-description {
+	text-align: center;
+	font-style: italic;
+}
+
+/* form style */
+.wrap-all-form {
+}
+.form-hr {
+	border-top: 1px solid #fff;
+}
+.form-group {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding:0px 20px;
+	width: 100%;
+}
+.form-group label {
+	display: inline-block;
+	margin-bottom: 0px;
+	width: ;
+	font-size: 13px;
+}
+.default-label {
+	margin-left: 20px;
+	margin-right: 10px;
+	width: 75px;
+}
+.form-group input {
+	margin-bottom: 0px;
+	padding: 0px 5px;
+	height: 28px;
+	font-size: 12px;
+	/*display: inline-block;*/
+}
+
+/* put * for required inputs */
+.required-input::after {
+	content: "*";
+	color: #d40000;
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* input full length */
+.wide-input {
+	width: 445px;
+}
+/* input short length */
+.short-input {
+	width: 120px;
+}
+
+/* name inputs */
+.firstname {
+	margin-left: 20px;
+}
+.name-label {
+	margin-right: 5px;
+	/*width: 90px;*/
+}
+.name-input {
+	width: 170px;
+}
+.lastname {
+	margin-left: 10px;
+}
+
+/* URL input */
+.url-label {
+	margin-top: 5px;
+	margin-left: 20px;
+}
+.url-input {
+	margin-top: 5px;
+	margin-left: 110px;
+	width: 443px;
+}
+
+.supportRequest-label {
+	margin-left: 20px;
+	margin-bottom: 5px;
+	width: 100%;
+}
+.supportRequest-textarea {
+	margin-left: 20px;
+	width: 535px;
+	resize: vertical;
+}
+.wrap-urgent {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.urgent-label {
+	margin-right: 20px;
+	cursor: pointer;
+}
+/* Urgent */
+.form-check-input {
+	margin: 0px 0px 3px 0px !important;
+	padding: 0px !important;
+	vertical-align: bottom;
+	height: 15px !important;
+	font-size: 200em;
+}
+
+/* Attach File */
+.ww-file-attach label {
+	margin-bottom: 10px;
+}
+.wrap-files {
+	margin-top: 20px;
+}
+.wrap-files div {
+	margin-bottom: 10px;
+}
+.wrap-files input {
+	display: inline-block;
+	margin-bottom: 0px;
+	height: initial;
+}
+.add-attach {
+	margin-left: 10px;
+	color: #333;
+	background-color: #ccc;
+	border-color: #777;
+}
+.delete-file {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.submit-btn {
+	/*margin-top: 30px;
+	margin-right: 50px;*/
+	float: right;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+
+/*email confirmation*/
+.email-confirmation {
+	margin-top: 70px;
+	margin-bottom: 20px;
+	padding: 40px 20px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+.email-conf-btn {
+	border-radius: 0px;
+}

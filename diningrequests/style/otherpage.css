@@ -1,0 +1,127 @@
+ul {
+  list-style: none !important;
+}
+
+/*
+ * Faqs
+*/
+/* faq search */
+.wrap-faq-search {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  min-height: 25px;
+}
+.wrap-faq-search mark {
+  padding: 0px;
+  background-color: #abd4e6;
+}
+
+
+
+.wrap-faq {
+  margin-top: 30px;
+}
+.faq_list_heading {
+  border-bottom: 1px solid #cecece;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-family: "Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+.foodproHead {
+  margin-top: 60px;
+}
+.panel-heading {
+  padding: 0px;
+  background-color: #e4e1c3 !important;
+}
+.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+  font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+  /*font-weight: 800;*/
+}
+.panel-body {
+  background-color: #f9f4e6;
+}
+.panel-default {
+  border-color: #c1c1c1;
+}
+#faq_search_input {
+  width: 300px;
+  border-radius: 5px;
+}
+.search-result {
+  padding: 0px !important;
+  border: 0px !important;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.search-result > div.wrap-search-list {
+  border: 1px solid #f3f3f3;
+}
+.search-result div.search-list {
+  padding: 10px 20px !important;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: initial !important;
+}
+.search-result div:hover {
+  background-color: #dedede;
+  text-decoration: none !important;
+}
+.search-result div hr {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-color: #ecc8c8;
+}
+.search-cantfind {
+  padding: 3px 5px;
+}
+.faq-scroll-up {
+  position: fixed;
+  display: none;
+  right: 100px;
+  bottom: 350px;
+  padding: 0px 6px 0px 10px;
+  font-size: 45px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.faq-scroll-up .glyphicon {
+  line-height: inherit;
+}
+.faq-scroll-up:hover {
+  background-color: #fff;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .search-result {
+    width: 600px;
+  }
+}
+@media (max-width: 600px){
+  .wrap-faq-search div {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .wrap-faq {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* Best Practice*/
+.best-practice-content {
+  padding: 1%;
+  line-height: 25px;
+}
+
+/* Contact */
+#contactModal .contact-send-btn {
+  background-color: #3b70ab;
+}
+#contactModal textarea {
+  height: 300px;
+}

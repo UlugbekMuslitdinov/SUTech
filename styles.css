@@ -1,0 +1,267 @@
+#sidebar-left h2,#sidebar-left a
+{
+	background:none!important;
+	color:#333;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif!important;
+	font-size:12px;
+	font-style:normal;
+	font-weight:400;
+	line-height:normal;
+}
+h1 {
+	color: #6E2E14;
+}
+h1, h2 {
+	line-height: normal;
+}
+#sidebar-left h2
+{
+	margin:0!important;
+	padding:0!important;
+}
+#container
+{
+	position:relative;
+}
+#sulogo_wrap
+{
+	bottom:10px;
+	position:absolute;
+}
+#union_logo
+{
+	border:none!important;
+	width:210px;
+}
+#members
+{
+	font-size:14px;
+	margin-bottom:20px;
+	margin-left:10px;
+}
+
+.membername,.membersite,.memberemail
+{
+	float:left;
+	margin-bottom:5px;
+}
+
+.membername
+{
+	font-weight:700;
+	width:220px;
+}
+
+.membersite,.memberemail
+{
+	width:50px;
+}
+
+#content h2
+{
+	margin-bottom:2px;
+}
+
+#teaminfo
+{
+	font-size:14px;
+	margin-left:10px;
+}
+
+#logo h1,#logo span
+{
+	background:#FFF url(./images/white-blue-banner.gif);
+}
+
+#content ul li,dl li,.item-list ul li
+{
+	list-style-image:url(./images/bullet.png) no-repeat center left;
+	margin-left:13px;
+	margin-top:6px;
+}
+
+#content
+{
+	font-size:12px;
+	height:auto!important;
+	min-height:495px;
+}
+
+#footer
+{
+	margin-bottom:10px;
+}
+
+h1,h1 a
+{
+	font-weight:700;
+}
+
+#content h2,h2 a
+{
+	font-size:16px;
+}
+
+body
+{
+	background:#E9E7D8;
+}
+
+.dialog_error img,.dialog_invalid img
+{
+	margin-right:8px;
+	vertical-align:text-top;
+}
+
+.dialog_error
+{
+	background-color:#FFBABA;
+	border:1px solid #D8000C;
+	color:#8A0008;
+	margin-bottom:10px;
+	margin-top:10px;
+	padding:5px;
+}
+
+.dialog_invalid
+{
+	background-color:#FEEFB3;
+	border:1px solid #A18100;
+	color:#452A00;
+	margin-bottom:10px;
+	margin-top:10px;
+	padding:5px;
+}
+
+.column_header
+{
+	background-color:#ABA885;
+	background:transparent url(./images/links.bg.png) repeat-x scroll 0 0;
+	color:#FFF;
+	font-size:12px px;
+	font-weight:700;
+}
+
+.action_column
+{
+	width:20px;
+}
+
+#container img
+{
+	padding:0;
+}
+
+.user_action
+{
+	padding:2px 0 0;
+	text-align:center;
+}
+
+#create_actions img
+{
+	margin-right:5px;
+	vertical-align:text-top;
+}
+
+.required_error
+{
+	border:1px solid #C00;
+}
+
+.content ul.menu li a,.left-menu ul li a
+{
+	font-weight:400;
+}
+
+#form_wrapper
+{
+	background-color:#E9E7D8;
+	float:left;
+	margin-top:10px;
+	width:723px;
+}
+
+#form_container
+{
+	float:left;
+	margin:10px;
+}
+
+.form_field
+{
+	float:left;
+	margin-top:10px;
+	width:341px;
+}
+
+.fieldset_left
+{
+	float:left;
+	margin-top:10px;
+	width:341px;
+}
+
+.fieldset_right
+{
+	float:left;
+	margin-top:10px;
+	width:341px;
+}
+
+.fieldset_text
+{
+	width:316px;
+}
+
+.field_text
+{
+	width:337px;
+}
+
+.field_title
+{
+	font-weight:700;
+}
+
+.field_required
+{
+	color:#C00;
+}
+
+.form_left_field
+{
+	margin-right:20px;
+}
+
+fieldset
+{
+	border:1px solid #abadb3;
+}
+
+fieldset legend
+{
+	color:#333;
+	font-size:14px;
+	font-weight:700;
+	margin-left:10px;
+}
+
+.fake-link {
+	float: left;
+	font-weight: normal;
+	color: #0000EE;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.fake-link:active {
+	color: #EE0000;
+}
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
