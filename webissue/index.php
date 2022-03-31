@@ -1,12 +1,7 @@
 <?php
-    //require_once("header.php");
-    //require_once("sidebar.php");
-    define('__ROOT__', dirname(dirname(__FILE__)));
-    require_once(__ROOT__.'/template/header.php');
-    require_once(__ROOT__.'/template/sidebar.php');
-    
+	require_once ($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'] . '/template/sidebar.php');  
 ?>
-
 
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="webissue.css">

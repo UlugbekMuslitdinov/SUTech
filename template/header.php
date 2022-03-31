@@ -9,17 +9,16 @@
 		//header("Location:$redirect");
 	}
 
-    $require_authorization = true;
-	$deny = $require_authorization; //Very big comment
+	$deny = $require_authorization;
 	$_SESSION["sucs_authorized"]=false;
-//	if ($_POST['action']=="logout"||strval($_GET["action"])=="logout") { // Uncomment his comment
-//		session_destroy();
-//		//header("Location: https://webauth.arizona.edu/webauth/logout?logout_href=https://pearl.sunion.arizona.edu/strap&logout_text=Return%20To%20Student%20Unions%20Computer%20Support");
-//		header("Location: /template/webauth/undisguise.php?logout_href=".$_SERVER["PHP_SELF"]);
-//	}
-//	else if ($_POST['action']=="login"||strval($_GET["action"])=="login") {
-//		include_once("webauth/include.php");
-//	}
+	if ($_POST['action']=="logout"||strval($_GET["action"])=="logout") {
+		session_destroy();
+		//header("Location: https://webauth.arizona.edu/webauth/logout?logout_href=https://pearl.sunion.arizona.edu/strap&logout_text=Return%20To%20Student%20Unions%20Computer%20Support");
+		header("Location: /template/webauth/undisguise.php?logout_href=".$_SERVER["PHP_SELF"]);
+	}
+	else if ($_POST['action']=="login"||strval($_GET["action"])=="login") {
+		include_once("webauth/include.php");
+	}
 	$script = $_SERVER["SCRIPT_NAME"];
 	if (isset($webauth_script_override) && $webauth_script_override!="") {
 		$script = $webauth_script_override;
@@ -56,8 +55,8 @@
 			$deny = false;
         }
 	}
-	 // think this fixes not logged in but auth required
-	else if (!isset($_SESSION['webauth']['netID']) && $require_authorization==true) { //One more comment
+	// think this fixes not logged in but auth required
+	else if (!isset($_SESSION['webauth']['netID']) && $require_authorization==true) {
 		include_once("webauth/include.php");
 	}
 ?>
@@ -121,9 +120,9 @@ function webauthAction ( selectedaction )
 		</div></a>
 
 		<br />
-<?php  //One more comment
+<?php
 if ($deny && $_SERVER["SCRIPT_NAME"]!="/denied.php") {
-	include("C:/xampp/htdocs/denied.php");
+	include("/srv/www/htdocs/sucs/denied.php");
 	die;
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
-	require_once("C:/xampp/htdocs/template/header.php");
-	require_once("C:/xampp/htdocs/template/sidebar.php");
+	require_once("header.php");
+	require_once("sidebar.php");
 ?>
 <style type="text/css">
 .feature_image {
@@ -20,5 +20,5 @@ td {
 </style>
 	Permission Denied. Please contact the administrator for further information.
 <?php
-        require_once("C:/xampp/htdocs/template/footer.php");
+        require_once("footer.php");
 ?>

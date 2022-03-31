@@ -24,8 +24,7 @@
     ],
     "require": {
         "robloach/component-installer": "*",
-        "components/jquery": ">=1.4.4",
-      "ext-mysql": "*"
+        "components/jquery": ">=1.4.4"
     },
     "extra": {
         "component": {
