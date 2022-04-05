@@ -213,5 +213,5 @@
 
 <?php
 //require_once("/template/footer.php");
-require_once($_SERVER["DOCUMENT_ROOT"].'/template/footer.php');
+require_once($_SERVER["DOCUMENT_ROOT"].'template/footer.php');
 ?>

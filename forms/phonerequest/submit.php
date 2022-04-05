@@ -3,8 +3,8 @@
 //include("db/db.php");
 //include("email.class.php");
 //define('__ROOT__', dirname(dirname(__FILE__)));
-include($_SERVER["DOCUMENT_ROOT"]."/phonerequest/db/db.php");
-include($_SERVER["DOCUMENT_ROOT"]."/phonerequest/email.class.php");
+include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/db/db.php");
+include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/email.class.php");
 
 $fields = "supervisor_name, supervisor_phone, employee_status, building, room_number, net_id, jack, jack_id, voicemail, long_distance, need_phone, call_appearance, kfs_number, call_appearance1, call_appearance2, call_appearance3, call_appearance4";
 
@@ -72,7 +72,7 @@ function generateEmail() {
 	header("Location: https://tech.union.arizona.edu");
 
 	//include("confirmation.php");
-	include($_SERVER["DOCUMENT_ROOT"]."/phonerequest/confirmation.php");
+	include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/confirmation.php");
 
 	$conn->close();
 
