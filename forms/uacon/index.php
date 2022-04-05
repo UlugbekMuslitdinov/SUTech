@@ -3,11 +3,11 @@
 //    require_once("header.php");
 //    require_once("sidebar.php");
 //    require_once("mysql/include.php");
-	define('__ROOT__', dirname(dirname(__FILE__, $levels=2))); //Note $levels=2 tells dirname() to return parent directory path two levels up, not default one, because thsi index.php needs to escape /forms folder to /sucs which is  two levels away
-    	include(__ROOT__.'/template/webauth/include.php');
-	require_once(__ROOT__.'/template/header.php');
-	require_once(__ROOT__.'/template/sidebar.php');	 
-	require_once(__ROOT__.'/template/mysql/include.php');   
+//	define('__ROOT__', dirname(dirname(__FILE__, $levels=2))); //Note $levels=2 tells dirname() to return parent directory path two levels up, not default one, because thsi index.php needs to escape /forms folder to /sucs which is  two levels away
+    	include($_SERVER["DOCUMENT_ROOT"].'/template/webauth/include.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/header.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/sidebar.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/mysql/include.php');
     
     
     $conn = select_db("sucs");
@@ -621,5 +621,5 @@ initEmployees();
 	unset($_SESSION["errors"]);
 	unset($_SESSION["formdata"]);
     //require_once("footer.php");
-    require_once(__ROOT__.'/template/footer.php');
+    require_once($_SERVER["DOCUMENT_ROOT"].'/template/footer.php');
 ?>

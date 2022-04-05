@@ -63,10 +63,10 @@ After this time, please <b>DO NOT</b> access Kronos until notified by email.
 	
 		if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 			//include_once('request_form.php');
-			include_once(__ROOT__.'/webissue/request_form.php');
+			include_once($_SERVER["DOCUMENT_ROOT"].'/webissue/request_form.php');
 		}else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			//require_once('email_request.php');
-			require_once(__ROOT__.'/webissue/email_request.php');
+			require_once($_SERVER["DOCUMENT_ROOT"].'/webissue/email_request.php');
 		}
 
 	?> 
@@ -74,5 +74,5 @@ After this time, please <b>DO NOT</b> access Kronos until notified by email.
 </div>
 <?php
         //require_once("footer.php");
-        require_once(__ROOT__.'/template/footer.php');
+        require_once($_SERVER["DOCUMENT_ROOT"].'/template/footer.php');
 ?>

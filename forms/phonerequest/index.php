@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-	define('__ROOT__', dirname(dirname(__FILE__, $levels=2))); //Note $levels=2 tells dirname() to return parent directory path two levels up, not default one, because thsi index.php needs to escape /forms folder to /sucs which is  two levels away
-	require_once(__ROOT__.'/template/header.php');
+//	define('__ROOT__', dirname(dirname(__FILE__, $levels=2))); //Note $levels=2 tells dirname() to return parent directory path two levels up, not default one, because thsi index.php needs to escape /forms folder to /sucs which is  two levels away
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/header.php');
 	//require_once(__ROOT__.'/template/sidebar.php');
 ?>
 
@@ -213,5 +213,5 @@
 
 <?php
 //require_once("/template/footer.php");
-require_once(__ROOT__.'/template/footer.php');
+require_once($_SERVER["DOCUMENT_ROOT"].'/template/footer.php');
 ?>
