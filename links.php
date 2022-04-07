@@ -17,8 +17,8 @@ li.definition {
 		<li class="definition"><a href="https://vpn.arizona.edu/StudentUnion">UA Special AnyConnect VPN for Kronos Supervisors ONLY</a> - <span style="font-weight:normal;">https://vpn.arizona.edu/StudentUnion</span></li>
 		<li class="definition"><a href="http://uits.arizona.edu/service/vpn">VPN (Virtual Private Network) Support</a></li>
 	<li>Kronos pages for accessing timestamp, WFC, and training</li>
-		<li class="definition"><a href="https://kronos.life.arizona.edu/wfc/applications/wtk/html/ess/quick-ts.jsp">Kronos Time Stamp Page</a></li>
-		<li class="definition"><a href="https://kronos.life.arizona.edu/wfc/navigator/logon">Kronos Main Login</a></li>
+		<li class="definition"><a href="https://arizona.kronos.net/wfcstatic/applications/navigator/html5/dist/container/index.html?version=8.1.9.392#/">Kronos Time Stamp Page</a></li>
+		<li class="definition"><a href="https://arizona.kronos.net/wfc/logon">Kronos Main Login</a></li>
 		<li class="definition"><a href="https://trainkronos.life.arizona.edu/wfc/navigator/logon">Kronos Training Site</a></li>
 		<div style="margin-top:6px;margin-left:40px;color:#777;font-style:italic;">For access to Kronos please contact the payroll office. 621-9460</div>
 	<li>SU Micros netvupoint & Sequioa</li>
@@ -33,7 +33,7 @@ li.definition {
 		<li class="definition"><a href="https://union.arizona.edu/about/directory/">Arizona Student Unions Staff Directory</a></li>
 	<li>Email Services</li>
         <li class="definition"><a href="http://uaconnect.arizona.edu/">UAConnect Login (Outlook Web Access)</a></li>
-        <li class="definition"><a href="http://www.uits.arizona.edu/services/catmail">CatMail - Student Email</a></li>
+        <li class="definition"><a href="https://directory.arizona.edu/link/catmail">CatMail - Student Email</a></li>
         <li class="definition"><a href="https://test.tech.union.arizona.edu/forms/uacon/index.php">UAConnect On-Campus Email/Calendaring System</a></li>
         <li class="definition"><a href="http://www.uits.arizona.edu/services/email/spam-viruses">Email Security: Spam &amp; Viruses</a></li>
     <li>Campus Software and Licensing</li>
@@ -42,9 +42,9 @@ li.definition {
 	<li>Common campus technology FAQ and help links</li>
 		<li class="definition"><a href="https://netid.arizona.edu/">UA NetID (Setup NetID, Change NetID Password, etc...)</a></li>
 		<li class="definition"><a href="http://www.uits.arizona.edu/services/netid-accounts/pw-reset">UAConnect &amp; NetID Password Reset Best Practices</a></li>
-		<li class="definition"><a href="http://uits.arizona.edu/services/uawifi/">Wireless Data Connectivity (UAWiFi)</a></li>
+		<li class="definition"><a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=d902391ddb3728109627d90d689619d8">Wireless Data Connectivity (UAWiFi)</a></li>
 		<li class="definition"><a href="http://uaccess.arizona.edu/">UAccess</a></li>
-		<li class="definition"><a href="http://uits.arizona.edu/services/uacbt">UACBT</a> (Computer-Based Training)</li>
+		<li class="definition"><a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=ed1925261bdd70107947edf1604bcbe1">UACBT</a> (Computer-Based Training)</li>
 		<li class="definition"><a href="http://sitelicense.arizona.edu/itacademy">Microsoft IT Academy eLearning Courses</a></li>
 		<!-- <li class="definition"><a href="http://www.u.arizona.edu/~ghorner/">Greg's Ugly but Fast Homepage</a></li> -->
 </ul>
