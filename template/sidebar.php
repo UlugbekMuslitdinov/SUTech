@@ -10,8 +10,8 @@
 //				ini_set('display_errors', '1');
 
 				// require_once($_SERVER['DOCUMENT_ROOT'] . '/template/mysql/include.php');
-				define('__ROOT__', dirname(dirname(__FILE__)));
-    			require_once(__ROOT__.'/template/mysql/include.php');
+//				define('__ROOT__', dirname(dirname(__FILE__)));
+    			require_once($_SERVER["DOCUMENT_ROOT"] . '/template/mysql/include.php');
 				// require_once('./mysql/include.php');
 
 				$db_link = select_db("sucs");

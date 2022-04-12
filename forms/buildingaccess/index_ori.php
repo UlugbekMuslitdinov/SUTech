@@ -1,7 +1,7 @@
 <?php
 	include("webauth/include.php");
-	require_once("header.php");
-	require_once("sidebar.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "template/header.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "template/sidebar.php");
 ?>
 <h1>Building Access Request Form</h1>
 <?php
@@ -677,5 +677,5 @@ if (isset($_SESSION["errors"])) {
 <?php
 unset($_SESSION["errors"]);
 unset($_SESSION["formdata"]);
-require_once("footer.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "template/footer.php");
 ?>

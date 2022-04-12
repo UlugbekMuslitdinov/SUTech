@@ -1,8 +1,8 @@
 <?php
 
 //require_once("./template/mysql/link.php");
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . "/template/mysql/link.php");
+//define('__ROOT__', dirname(dirname(__FILE__)));
+require_once($_SERVER["DOCUMENT_ROOT"] . "/template/mysql/link.php");
 // require_once("link.php");
 function selectDB($DBname) {
 	mysql_select_db($DBname) or die(mysql_error());
