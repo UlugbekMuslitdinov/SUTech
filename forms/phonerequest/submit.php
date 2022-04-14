@@ -1,10 +1,10 @@
 <?php 
 
-//include("db/db.php");
-//include("email.class.php");
+//include($_SERVER["DOCUMENT_ROOT"] . "forms/phonerequest/db/db.php");
+//include($_SERVER["DOCUMENT_ROOT"] . "forms/phonerequest/email.class.php");
 //define('__ROOT__', dirname(dirname(__FILE__)));
-include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/db/db.php");
-include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/email.class.php");
+include($_SERVER["DOCUMENT_ROOT"] . "forms/phonerequest/db/db.php");
+include($_SERVER["DOCUMENT_ROOT"] . "forms/phonerequest/email.class.php");
 
 $fields = "supervisor_name, supervisor_phone, employee_status, building, room_number, net_id, jack, jack_id, voicemail, long_distance, need_phone, call_appearance, kfs_number, call_appearance1, call_appearance2, call_appearance3, call_appearance4";
 
@@ -14,7 +14,7 @@ $sql = "INSERT INTO phone_requests ($fields) VALUES ('$_POST[supervisor_name]', 
 
 if ($conn->query($sql) === TRUE) {
 } else {
-	// print_r($_POST);
+	 print_r($_POST);
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
@@ -71,8 +71,7 @@ function generateEmail() {
 
 	header("Location: https://tech.union.arizona.edu");
 
-	//include("confirmation.php");
-	include($_SERVER["DOCUMENT_ROOT"]."forms/phonerequest/confirmation.php");
+	include($_SERVER["DOCUMENT_ROOT"] . "forms/phonerequest/confirmation.php");
 
 	$conn->close();
 

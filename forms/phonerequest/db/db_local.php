@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
+$servername = "mysql_host";
+$username = "sucsweb";
 // $password = "SU-mon5";
-$password = "Kampoopoo889";
+$password = "W3bZ!pp3d";
 $dbname = "sucs";
 
 // Create connection

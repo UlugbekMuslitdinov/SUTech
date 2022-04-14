@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "mysql_host";
 $username = "sucsweb";
 // $password = "SU-mon5";
 $password = "W3bZ!pp3d";
