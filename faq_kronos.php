@@ -1,8 +1,8 @@
 <?php
 //	require_once("header.php");
 //	require_once("sidebar.php");
-	require_once($_SERVER["DOCUMENT_ROOT"] . "template/header.php");
-	require_once($_SERVER["DOCUMENT_ROOT"] . "template/sidebar.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/template/header.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/template/sidebar.php");
 ?>
 <style type="text/css">
 #about img {
@@ -119,5 +119,5 @@ $(document).ready(function() {
 </div>
 <?php
 //        require_once("footer.php");
-	require_once($_SERVER["DOCUMENT_ROOT"] . "template/footer.php");
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/template/footer.php");
 ?>

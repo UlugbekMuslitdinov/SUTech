@@ -122,7 +122,7 @@ function webauthAction ( selectedaction )
 		<br />
 <?php
 if ($deny && $_SERVER["SCRIPT_NAME"]!="/denied.php") {
-	include($_SERVER["DOCUMENT_ROOT"] . "denied.php");
+	include($_SERVER["DOCUMENT_ROOT"] . "/denied.php");
 	die;
 }
 ?>
