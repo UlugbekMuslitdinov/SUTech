@@ -1,9 +1,9 @@
 <?php
 //    require_once("header.php");
 //    require_once("sidebar.php");
-	define('__ROOT__', dirname(dirname(__FILE__))); 
-	require_once(__ROOT__.'/template/header.php');
-	require_once(__ROOT__.'/template/sidebar.php');	
+//	define('__ROOT__', dirname(dirname(__FILE__)));
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/header.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/sidebar.php');
 ?>
 
 
@@ -87,5 +87,5 @@ After this time, please <b>DO NOT</b> access Kronos until notified by email.
 </div>
 <?php
         //require_once("footer.php");
-	require_once(__ROOT__.'/template/footer.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/template/footer.php');
 ?>

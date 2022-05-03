@@ -56,22 +56,23 @@ function alarmAccess(num) {
 	var placeholder = "alarm_placeholder";
 	var myUpdater = new Ajax.Updater(placeholder,url,{method:'get',parameters:postData});
 	}
+var employee_fields = {
+    "number"	: "employee_info_number",
+    "first"		: "employee_first_name",
+    "last"		: "employee_last_name",
+    "catcard"	: "catcard",
+    "unit"		: "employee_unit",
+    "employee_id" : "employee_id",
+    "phone" :  "employee_phone",
+    "job" :  "employee_job",
+    "net_id" : "net_id"
+};
+
 </script>
 <script type="text/javascript">
 	var employees = [];
 	var employees_state = "single";
 	var employee_single;
-	var employee_fields = {
-		"number"	: "employee_info_number",
-		"first"		: "employee_first_name",
-		"last"		: "employee_last_name",
-		"catcard"	: "catcard",
-		"pin"		: "pin",
-		"unit"		: "employee_unit",
-		"employee_id" : "employee_id",
-		// "alarm_password" : "alarm_password",
-		"net_id" : "net_id"
-	};
 	var em_fields = <?php if(!empty($_SESSION["formdata"]["employee_multi"])){echo json_encode($_SESSION["formdata"]["employee_multi"]);}else{echo "{}";} ?>;
 	var em_errors = <?php if(!empty($_SESSION["errors"]["employee_multi"])){echo json_encode($_SESSION["errors"]["employee_multi"]);}else{echo "{}";} ?>;
 
@@ -153,7 +154,8 @@ function alarmAccess(num) {
 		var newEmpl = {};
 		newEmpl.container = document.getElementById("employee_info_proto").cloneNode(true);
 		newEmpl.container.id="employee_info_"+newIndex.toString();
-		for(field in employee_fields){
+        let fields = document.getElementsByClassName("submission");
+        for(let field in fields){
 			newEmpl[field] = newEmpl.container.querySelector("#"+employee_fields[field]+"_proto");
 			newEmpl[field].id = employee_fields[field]+"_"+newIndex.toString();
 			newEmpl[field].name = newEmpl[field].id;
@@ -206,6 +208,7 @@ function alarmAccess(num) {
 			addEmployee();
 		}
 	}
+
 </script>
 
 <div id="employee_stash" style="display: none;">
@@ -256,9 +259,9 @@ function alarmAccess(num) {
 			</div>
 			
 			<!--Employee Information-->
-			<!--<div id="employee_info_proto" class="employee_info_multi">
-			<input type="hidden" id="employee_info_number_proto" value="1" />-->
-			<div class="form_field form_left_field">
+<!--			<div id="employee_info_proto" class="employee_info_multi">-->
+<!--			<input type="hidden" id="employee_info_number_proto" value="1" />-->
+			<div class="form_field form_left_field" id="employee_info_proto">
 				<div class="field_title">
 					First Name:
 					<span class="field_required">*</span>
@@ -364,62 +367,62 @@ function alarmAccess(num) {
 					<div class="fieldset_left" style="margin-right:20px;">
 						<h2 style="font-weight: normal;"> General Access</h2><br />
 						<b><p class="<?php if ($_SESSION["errors"]["access"]) {echo "required_error";} ?>">Areas to Access: <span class="field_required">*</span></p></b><br />
-						<input name="access[28]" value="Underground Doors by Linen Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Underground Doors by Linen Room"]) {echo "checked";} ?> />Underground Doors by Linen Room<br />
-						<input name="access[1]" value="Locker Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Locker Room"]) {echo "checked";} ?> />Employee Locker Room Only<br />
-						<input name="access[2]" value="Building Entrance" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Building Entrance"]) {echo "checked";} ?> />Building Entrance (includes locker room)<br />
+						<input class="submission" name="access[28]" value="Underground Doors by Linen Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Underground Doors by Linen Room"]) {echo "checked";} ?> />Underground Doors by Linen Room<br />
+						<input class="submission" name="access[1]" value="Locker Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Locker Room"]) {echo "checked";} ?> />Employee Locker Room Only<br />
+						<input class="submission" name="access[2]" value="Building Entrance" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Building Entrance"]) {echo "checked";} ?> />Building Entrance (includes locker room)<br />
 
-						<input name="access[21]" value="Administrative Offices" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Administrative Offices"]) {echo "checked";} ?> />Administrative Offices<br />
+						<input class="submission" name="access[21]" value="Administrative Offices" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Administrative Offices"]) {echo "checked";} ?> />Administrative Offices<br />
 						
-						<input name="access[42]" value="Bear Down Gym Catering" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Bear Down Gym Catering"]) {echo "checked";} ?> />Bear Down Gym Catering<br />
+						<input class="submission" name="access[42]" value="Bear Down Gym Catering" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Bear Down Gym Catering"]) {echo "checked";} ?> />Bear Down Gym Catering<br />
 						
-						<input name="access[26]" value="Cactus Grill" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Cactus Grill"]) {echo "checked";} ?> />Cactus Grill<br />
-						<input name="access[40]" value="Cash Room Customer Entrance" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Cash Room Customer Entrance"]) {echo "checked";} ?> />Cash Room Customer Entrance<br />
-						<input name="access[31]" value="Catalyst" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catalyst"]) {echo "checked";} ?> />Catalyst<br />
-						<input name="access[6]" value="Catering" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catering"]) {echo "checked";} ?> />Catering<br />
-						<input name="access[32]" value="Catering Servery 3rd Floor" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catering Servery 3rd Floor "]) {echo "checked";} ?> />Catering Servery 3rd Floor <br />
+						<input class="submission" name="access[26]" value="Cactus Grill" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Cactus Grill"]) {echo "checked";} ?> />Cactus Grill<br />
+						<input class="submission" name="access[40]" value="Cash Room Customer Entrance" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Cash Room Customer Entrance"]) {echo "checked";} ?> />Cash Room Customer Entrance<br />
+						<input class="submission" name="access[31]" value="Catalyst" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catalyst"]) {echo "checked";} ?> />Catalyst<br />
+						<input class="submission" name="access[6]" value="Catering" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catering"]) {echo "checked";} ?> />Catering<br />
+						<input class="submission" name="access[32]" value="Catering Servery 3rd Floor" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Catering Servery 3rd Floor "]) {echo "checked";} ?> />Catering Servery 3rd Floor <br />
 						
-						<input name="access[7]" value="Dock" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Dock"]) {echo "checked";} ?> />Dock<br />
-						<input name="access[8]" value="Einsteins" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Einsteins"]) {echo "checked";} ?> />Einstein's<br />
+						<input class="submission" name="access[7]" value="Dock" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Dock"]) {echo "checked";} ?> />Dock<br />
+						<input class="submission" name="access[8]" value="Einsteins" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Einsteins"]) {echo "checked";} ?> />Einstein's<br />
 						
-						<input name="access[25]" value="Employee Break Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Employee Break Room"]) {echo "checked";} ?> />Employee Break Room<br />
+						<input class="submission" name="access[25]" value="Employee Break Room" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Employee Break Room"]) {echo "checked";} ?> />Employee Break Room<br />
 						
-						<input name="access[33]" value="Esports Arena" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Esports Arena"]) {echo "checked";} ?> />Esports Arena<br />
+						<input class="submission" name="access[33]" value="Esports Arena" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Esports Arena"]) {echo "checked";} ?> />Esports Arena<br />
 						
-						<input name="access[18]" value="Event Planning/Catering Rm 441 (24/7)" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["SAEM/AISS Marketing Staff"]) {echo "checked";} ?> />Event Planning/Catering Rm 441 (24/7) <br />
-						<input name="access[19]" value="Event Planning/Catering Rm 441 (Limited)s" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["SAEM/AISS Marketing Students"]) {echo "checked";} ?> />Event Planning/Catering Rm 441 (Limited)<br />
+						<input class="submission" name="access[18]" value="Event Planning/Catering Rm 441 (24/7)" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["SAEM/AISS Marketing Staff"]) {echo "checked";} ?> />Event Planning/Catering Rm 441 (24/7) <br />
+						<input class="submission" name="access[19]" value="Event Planning/Catering Rm 441 (Limited)s" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["SAEM/AISS Marketing Students"]) {echo "checked";} ?> />Event Planning/Catering Rm 441 (Limited)<br />
 						
-						<input name="access[35]" value="Global Food Court 2nd floor" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Food Court 2nd floor"]) {echo "checked";} ?> />Global Food Court 2nd floor<br />
+						<input class="submission" name="access[35]" value="Global Food Court 2nd floor" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Food Court 2nd floor"]) {echo "checked";} ?> />Global Food Court 2nd floor<br />
 						
-						<input name="access[36]" value="Global Loading Dock (includes 100E & W doors)" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Loading Dock (includes 100E & W doors)"]) {echo "checked";} ?> />Global Loading Dock (includes 100E & W doors)<br />
+						<input class="submission" name="access[36]" value="Global Loading Dock (includes 100E & W doors)" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Loading Dock (includes 100E & W doors)"]) {echo "checked";} ?> />Global Loading Dock (includes 100E & W doors)<br />
 						
-						<input name="access[10]" value="Global Market" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Market"]) {echo "checked";} ?> />Global Market<br />
+						<input class="submission" name="access[10]" value="Global Market" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Global Market"]) {echo "checked";} ?> />Global Market<br />
 						
 						
-						<input name="access[34]" value="Highland 24/7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Highland 24/7"]) {echo "checked";} ?> />Highland 24/7<br />
+						<input class="submission" name="access[34]" value="Highland 24/7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Highland 24/7"]) {echo "checked";} ?> />Highland 24/7<br />
 
-						<input name="access[16]" value="Mealplan-CatCard Office 24-7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Mealplan-CatCard Office"]) {echo "checked";} ?> />Mealplan Office (24/7)<br />
-						<input name="access[17]" value="Mealplan-CatCard Office Students" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Mealplan-CatCard Office"]) {echo "checked";} ?> />Mealplan Office Students<br />
+						<input class="submission" name="access[16]" value="Mealplan-CatCard Office 24-7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Mealplan-CatCard Office"]) {echo "checked";} ?> />Mealplan Office (24/7)<br />
+						<input class="submission" name="access[17]" value="Mealplan-CatCard Office Students" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Mealplan-CatCard Office"]) {echo "checked";} ?> />Mealplan Office Students<br />
 
-						<input name="access[11]" value="NRich" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["NRich"]) {echo "checked";} ?> />NRich<br />
+						<input class="submission" name="access[11]" value="NRich" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["NRich"]) {echo "checked";} ?> />NRich<br />
 
-						<input name="access[22]" value="Pangea/Scoop" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Pangea/Scoop"]) {echo "checked";} ?> />Pangea/Scoop<br />
+						<input class="submission" name="access[22]" value="Pangea/Scoop" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Pangea/Scoop"]) {echo "checked";} ?> />Pangea/Scoop<br />
 
-						<input name="access[12]" value="Production/Dishroom" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Production/Dishroom"]) {echo "checked";} ?> />Production/Dishroom<br />
+						<input class="submission" name="access[12]" value="Production/Dishroom" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Production/Dishroom"]) {echo "checked";} ?> />Production/Dishroom<br />
 
-						<input name="access[41]" value="Red and Blue Market" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Red and Blue Market"]) {echo "checked";} ?> />Red and Blue Market<br />
+						<input class="submission" name="access[41]" value="Red and Blue Market" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Red and Blue Market"]) {echo "checked";} ?> />Red and Blue Market<br />
 						
-						<input name="access[37]" value="Roof" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Roof"]) {echo "checked";} ?> />Roof<br />
+						<input class="submission" name="access[37]" value="Roof" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Roof"]) {echo "checked";} ?> />Roof<br />
 						
-						<input name="access[38]" value="Slot Canyon" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Slot Canyon"]) {echo "checked";} ?> />Slot Canyon<br />
+						<input class="submission" name="access[38]" value="Slot Canyon" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Slot Canyon"]) {echo "checked";} ?> />Slot Canyon<br />
 
-						<input name="access[13]" value="Starbucks-BookStore 24-7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-BookStore-247"]) {echo "checked";} ?> />Starbucks-BookStore (24/7)<br />
-						<input name="access[14]" value="Starbucks-BookStore Limited" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-BookStore-Limited"]) {echo "checked";} ?> />Starbucks-BookStore (Limited)<br />
-						<input name="access[15]" value="Starbucks-Library" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-Library"]) {echo "checked";} ?> />Starbucks-Library<br />
+						<input class="submission" name="access[13]" value="Starbucks-BookStore 24-7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-BookStore-247"]) {echo "checked";} ?> />Starbucks-BookStore (24/7)<br />
+						<input class="submission" name="access[14]" value="Starbucks-BookStore Limited" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-BookStore-Limited"]) {echo "checked";} ?> />Starbucks-BookStore (Limited)<br />
+						<input class="submission" name="access[15]" value="Starbucks-Library" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Starbucks-Library"]) {echo "checked";} ?> />Starbucks-Library<br />
 						
-						<input name="access[20]" value="Warehouse" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Warehouse"]) {echo "checked";} ?> />Warehouse<br />
-						<input name="access[29]" value="85 North Limited" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["85 North Limited"]) {echo "checked";} ?> />85 North Limited (4 digit pin required)<br />
-						<input name="access[39]" value="85 North 24/7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["85 North 24/7"]) {echo "checked";} ?> />85 North 24/7 (4 digit pin required)<br />
-						<label><input name="access[30]" value="Other" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Other"]) {echo "checked";} ?> onclick="showOtherInput()" />Other areas to access (Please Specify)</label><br />
+						<input class="submission" name="access[20]" value="Warehouse" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Warehouse"]) {echo "checked";} ?> />Warehouse<br />
+						<input class="submission" name="access[29]" value="85 North Limited" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["85 North Limited"]) {echo "checked";} ?> />85 North Limited (4 digit pin required)<br />
+						<input class="submission" name="access[39]" value="85 North 24/7" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["85 North 24/7"]) {echo "checked";} ?> />85 North 24/7 (4 digit pin required)<br />
+						<label><input class="submission" name="access[30]" value="Other" type="checkbox" <?php if ($_SESSION["formdata"]["access"]["Other"]) {echo "checked";} ?> onclick="showOtherInput()" />Other areas to access (Please Specify)</label><br />
 						
 						<span id="other-input-box" style="display:none; margin-left: 20px;"> 
 						<p style="margin-bottom: 0px;">Other Areas to Access:</p>
@@ -460,6 +463,9 @@ function alarmAccess(num) {
 			</div>
 
 			<div style="clear:both;">
+                <div id="action-add" style="width: 100%; border-bottom: 1px solid black; padding-bottom: 5px; margin-bottom: 15px; margin-top: 5px">
+                    <button type="button" onclick="addEmployee()" style="font-weight: bold; color: #3338ff;" onMouseOver="style.color='#E00A0D'" onMouseOut="style.color='#3338ff'">Add Employee</button>
+                </div>
 				<input type="submit" name="cancel" value="Cancel" />&nbsp;&nbsp;&nbsp;
 				<input type="submit" name="validate" value="Submit" />
 				<!--<input type="button" name="validate" value="Submit" onclick="validateAndSubmitNew();" />-->
