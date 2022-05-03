@@ -19,7 +19,7 @@ if ( isset($_POST['submit']) ){
 	$paramInput = array();
 	$firstname = inputToArray($_POST['first_name'],'firstname');
 	$lastname = inputToArray($_POST['last_name'],'lastname');
-	$email = $_POST['email'].'@email.arizona.edu'; //email from form will only be NetID, need to add @email.arizona.edu extension
+	$email = $_POST['email'];    //.'@email.arizona.edu'; //email from form will only be NetID, need to add @email.arizona.edu extension
 	$email = inputToArray($email,'email'); 
 	//$email = inputToArray($_POST['email'],'email'); 
 	$phone = inputToArray($_POST['phone'],'phone');

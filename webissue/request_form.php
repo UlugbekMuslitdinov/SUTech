@@ -1,4 +1,6 @@
-<form action="index.php" method="POST" class="wrap-all-form" enctype="multipart/form-data">
+
+
+<form name="issueForm" onsubmit="validateEmail()" id="issueForm" method="POST" class="wrap-all-form" enctype="multipart/form-data">
 		<!-- Error report -->
 		<?php
 		if( isset($_SESSION['web_issue_errors']) ){
@@ -43,7 +45,7 @@
 		
 		<!-- new input is same as old except type is changed to text and placeholder is added to prompt user to input a netid -->
 		<input type="text" class="email-input short-input" name="email" id="email" placeholder="NetID" size="16" value="<?php wi_oldInputs($wi_oldInputs,'email'); ?>" style="min-width:145px" required>
-		<label for="email" class="">@email.arizona.edu</label>	
+<!--		<label for="email" class="">@email.arizona.edu</label>	-->
 	    </div>
 	    <div class="form-group">
 	    	<label for="phone" class="default-label">Phone: </label>
@@ -84,11 +86,36 @@
 	    <div class="form-group ww-file-attach">
 	    	<label>Attach File</label>
 	    	<a class="btn btn-default btn-sm add-attach" id="add_more_file">Attach files</a>
-	    	<button type="submit" name="submit" class="btn btn-primary btn-lg submit-btn">Submit</button> (Click for multiple attachment.)
+	    	<button id="btn-submit" onclick="validateEmail()" type="submit" name="submit" class="btn btn-primary btn-lg submit-btn">Submit</button> (Click for multiple attachment.)
 	    	<div class="wrap-files">
 	    	</div>
 	    </div>
     </form>
+
+
+<script>
+    function validateEmail()
+    {
+        let catmail = document.issueForm.email.value
+        let parts = catmail.split("@")
+        let possible_domains = [
+            "email.arizona.edu",
+            "arizona.edu",
+            "catworks.arizona.edu",
+            "catmail.arizona.edu"
+        ]
+        if isInList(parts[1], possible_domains) != true{
+            alert("Wrong email domain")
+        }
+    }
+
+    function isInList(str, list){
+        for (i in list) {
+            if (str == list[i]) {return true}
+        }
+        return false
+    }
+</script>
 
     <?php
     	// Destroy old input and error session
