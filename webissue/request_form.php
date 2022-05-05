@@ -62,7 +62,7 @@
 	    </div>
 	    <div class="form-group">
 	    	<label for="supportRequest" class="supportRequest-label required-input">Issue details: </label>
-	    	<textarea class="supportRequest-textarea" name="supportRequestText" id="supportRequest" rows="12" value="" wrap="hard" required><?php wi_oldInputs($wi_oldInputs,'text'); ?></textarea>
+	    	<textarea class="supportRequest-textarea" name="supportRequestText" id="supportRequest" rows="12" value="" required><?php wi_oldInputs($wi_oldInputs,'text'); ?></textarea>
 	    </div>
 	    <hr class="form-hr">
 	    <div class="form-group wrap-urgent">	    
