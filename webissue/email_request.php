@@ -25,10 +25,8 @@ if ( isset($_POST['submit']) ){
 	$phone = inputToArray($_POST['phone'],'phone');
 	$url = inputToArray($_POST['url'],'url');
 	$msg = inputToArray($_POST['supportRequestText'],'text');
-//   	$msg = str_replace("\n","<br>",$msg);// trim msg to convert all <br> to newline
-   	//the above trim has been removed because it seems to be adding whitespace the textarea form did not have originally
-   	//the fix to this whitespace problem in textarea was adding wrap="hard" to textarea in request_form.php and omitting str_replace trim change to $msg
-    // This solution doesn't work. It is better just to remove this step and it solves the whitespace problem
+    $final_msg = nl2br($msg);   //This function converts the "\n" in the string from the text_area of HTML Document
+                                // with the wrap="hard" attribute to the <br>
 	$title = inputToArray($_POST['web_support_title'],'title');
 	$urgent = inputToArray($_POST['optionsUrgent'],'urgent');
 	
@@ -94,7 +92,7 @@ if ( isset($_POST['submit']) ){
 					directToBackWithError($errors);
 				}
 
-				if ( emailToSUTech($id,$email,$title,$msg,$firstname,$lastname,$phone,$url,$request_time) ) {
+				if ( emailToSUTech($id,$email,$title,$final_msg,$firstname,$lastname,$phone,$url,$request_time) ) {
 					afterEmailSent();
 				}else {
 					// Report the error
